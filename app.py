@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request
 import sqlite3
 
 app = Flask(__name__)
@@ -18,13 +18,15 @@ def login():
     health_id = request.form["health_id"]
 
     conn = get_db()
+
     child = conn.execute(
-        "SELECT * FROM children WHERE health_id = ?",
+        "SELECT * FROM children WHERE child_id = ?",
         (health_id,)
     ).fetchone()
 
     if child:
         return render_template("dashboard.html", child=child)
+
     else:
         return "Child not found"
 
