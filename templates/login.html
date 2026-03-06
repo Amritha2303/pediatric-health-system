@@ -20,3 +20,30 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Pediatric Health Login</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="login-container">
+
+<h1>Pediatric Health ID</h1>
+<p class="subtitle">Access child medical records</p>
+
+<form action="/login" method="POST">
+
+<input type="text" name="health_id" placeholder="Enter Health ID" required>
+
+<button type="submit">Login</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
