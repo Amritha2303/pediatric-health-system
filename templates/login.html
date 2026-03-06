@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Parent Login</title>
+<title>Pediatric Health Login</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
 
-<h1>Parent Login</h1>
+<div class="login-container">
+
+<h1>Pediatric Health ID</h1>
+<p class="subtitle">Secure access for child medical records</p>
 
 <form action="/login" method="POST">
 
-<label>Enter Child Health ID</label><br>
-<input type="text" name="health_id" required><br><br>
+<input type="text" name="health_id" placeholder="Enter Health ID" required>
 
 <button type="submit">Login</button>
 
 </form>
+
+</div>
 
 </body>
 </html>
