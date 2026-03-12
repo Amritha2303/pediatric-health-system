@@ -15,7 +15,7 @@ def home():
 @app.route("/login", methods=["POST"])
 def login():
 
-    health_id = request.form["health_id"]
+    health_id = request.form["med_id"]
 
     conn = get_db()
     child = conn.execute(
@@ -29,4 +29,5 @@ def login():
         return "Child not found"
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True) 
+    
