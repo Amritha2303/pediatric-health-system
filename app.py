@@ -15,7 +15,7 @@ def home():
 @app.route("/login", methods=["POST"])
 def login():
 
-    health_id = request.form["med_id"]
+    health_id = request.form["health_id"]
 
     conn = get_db()
     child = conn.execute(
